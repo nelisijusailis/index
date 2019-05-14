@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Message Kerne</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+        
+        header {
+            width: 100%;
+            float: left;
+        }
+        
+        .left-elements {
+            margin: 0;
+            padding: 0;
+            width: 50%;
+            float: left;
+            background: rgba(0, 178, 148, 1.0);
+        }
+        
+        .right-elements {
+            margin: 0;
+            padding: 0;
+            width: 50%;
+            float: left;
+            overflow: hidden;
+        }
+        
+        .wrapper-left {
+            width: 75%;
+            margin-top: 60px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 150px;
+        }
+        
+        .left-title {
+            color: white;
+            font-weight: 700;
+            font-size: 20pt;
+            text-align: center;
+        }
+        
+        .image {
+            width: 35%;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 40px;
+        }
+        
+        .image img {
+            width: 200px;
+            height: 200px;
+            border: 3px solid white;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .features {
+            width: 98%;
+            margin-top: 0;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 50px;
+        }
+        
+        .features p {
+            padding: 0px 10px;
+            margin-top: 10px;
+            color: white;
+            font-size: 13pt;
+            word-spacing: 5px;
+            line-height: 35px;
+        }
+        
+        .features h5 {
+            color: white;
+            font-weight: 700;
+        }
+        
+        .features h6 {
+            color: white;
+            font-size: 12pt;
+            margin-top: 20px;
+            padding: 0px 10px;
+        }
+        
+        .fa-whatsapp-square,
+        .fa-envelope,
+        .fa-twitter-square {
+            font-size: 20pt;
+        }
+        
+        .features h6 a {
+            color: white !important;
+            text-decoration: none !important;
+            cursor: pointer;
+        }
+        
+        .features h6 a:hover {
+            color: rgba(0, 0, 0, 0.8) !important;
+        }
+        
+        footer {
+            width: 100%;
+            float: left;
+            overflow: hidden;
+            padding-top: 50px;
+            padding-bottom: 120px;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        .copyright-link {
+            text-decoration: none !important;
+        }
+        
+        .copyright-btn:focus {
+            outline: 0 !important;
+        }
+        
+        .copyright-btn {
+            padding: 10px 20px;
+            border: 2px solid rgba(0, 178, 148, 1.0);
+            background: rgba(0, 178, 148, 1.0);
+            color: white;
+            cursor: pointer;
+            transition: ease-in-out 0.2s;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+        
+        .copyright-btn:hover {
+            background: transparent;
+            color: rgba(0, 178, 148, 1.0);
+        }
+        
+        .wrapper-right {
+            width: 75%;
+            margin-top: 60px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 0px;
+        }
+        
+        .card {
+            border-radius: 0 !important;
+        }
+        
+        .card-header {
+            border: none !important;
+            background: rgba(0, 178, 148, 1.0) !important;
+            border-radius: 0 !important;
+        }
+        
+        .form-title {
+            padding: 5px 20px;
+            font-weight: 700;
+            font-size: 15pt;
+            color: white;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 23px 20px !important;
+            border-top-left-radius: 20px !important;
+            border-bottom-left-radius: 20px !important;
+            border-top-right-radius: 20px !important;
+            border-bottom-right-radius: 20px !important;
+            margin-bottom: 20px !important;
+        }
+        
+        .text-area {
+            padding: 12px 20px !important;
+            resize: none !important;
+        }
+        
+        .btn {
+            width: 710%;
+            border-top-left-radius: 20px !important;
+            border-bottom-left-radius: 20px !important;
+            border-top-right-radius: 20px !important;
+            border-bottom-right-radius: 20px !important;
+            margin-top: 8px !important;
+            padding: 8px !important;
+            background: rgba(0, 178, 148, 1.0) !important;
+            color: white;
+            font-size: 14pt !important;
+        }
+        
+        .btn:hover {
+            background: rgba(2, 141, 118, 1.0) !important;
+        }
+        
+        .form-control:focus {
+            border-color: rgba(2, 141, 118, 0.7) !important;
+            box-shadow: 0 0 1px 3px rgba(2, 141, 118, 0.2) !important;
+            outline: 0 !important;
+        }
+        
+        .btn:focus {
+            border-color: rgba(2, 141, 118, 0.7) !important;
+            box-shadow: 0 0 1px 3px rgba(2, 141, 118, 0.2) !important;
+            outline: 0 !important;
+        }
+        
+        .form-text {
+            color: red !important;
+            opacity: 0.6;
+            padding: 0 0 0 18px !important;
+            margin: 0 !important;
+        }
+        /* media query  */
+        
+        @media all and (max-width: 1480px) {
+            .image {
+                width: 55%;
+            }
+            .left-title {
+                font-size: 17pt;
+            }
+        }
+        
+        @media all and (max-width: 1280px) {
+            .image {
+                width: 58%;
+            }
+            .left-title {
+                font-size: 16pt;
+            }
+            .wrapper-left {
+                width: 82%;
+            }
+            .wrapper-right {
+                width: 82%;
+            }
+        }
+        
+        @media all and (max-width: 1120px) {
+            .image {
+                width: 60%;
+            }
+            .left-title {
+                font-size: 15pt;
+            }
+            .features p {
+                font-size: 11.5pt;
+            }
+            .features h5 {
+                font-size: 12pt;
+            }
+            .features h6 {
+                font-size: 11pt;
+            }
+        }
+        
+        @media all and (max-width: 960px) {
+            .left-elements {
+                width: 100%;
+            }
+            .right-elements {
+                width: 100%;
+            }
+            .features {
+                display: none;
+            }
+            .wrapper-left {
+                margin-top: 25px;
+                margin-bottom: 40px;
+            }
+            .image {
+                margin-top: 30px;
+                margin-bottom: 10px;
+            }
+            .card {
+                margin-bottom: 60px;
+            }
+            .wrapper-right {
+                margin-top: 30px;
+            }
+        }
+        
+        @media all and (max-width: 960px) {
+            .wrapper-left {
+                width: 94%;
+            }
+            .wrapper-right {
+                width: 94%;
+            }
+            .form-title {
+                font-size: 13pt;
+            }
+            .left-title {
+                font-size: 13pt;
+            }
+            .image img {
+                width: 160px;
+                height: 160px;
+            }
+        }
+    </style>
+
+    <link rel="icon" href="titlelogo.png">
+    <link href="/Users/ailis/Downloads/sketchy_files/package.json/style.css/style.css/new/another.html/another.html/another.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <header>
+        <div class="left-elements">
+            <div class="wrapper-left">
+                <h2 class="left-title">yada yada yada</h2>
+                <div class="image">
+                    <img class="img-fluid" src="url when she gets it" alt="pic" data-toggle="tooltip" data-placement="right" title="42">
+                </div>
+
+                <div class="features">
+                    <h5> why </h5>
+                    <p> explaining principle</p>
+                </div>
+                <div class="features">
+                    <h5>something else</h5>
+                    <p></p>
+                </div>
+                <div class="features">
+                    <h5>My contacts :</h5>
+                    <h6><i class="fab fa-whatsapp-square"></i>&emsp;<a href="tel:+" target="_blank">+</a></h6>
+                    <h6><i class="fas fa-envelope"></i>&emsp;<a href="mailto:dontmailanythingyet" target="_blank">-</a></h6>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="right-elements">
+            <div class="wrapper-right">
+                <div class="card animated slideInUp">
+
+                    <div class="card-header">
+                        <p class="form-title">Message input form</p>
+                    </div>
+                    <div class="card-body">
+                        <form action="mailto:nnelisijusailis@gmail.com" method="post">
+
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="sender_name" placeholder="Your full name" value="" required>
+                                <small class="form-text"></small>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="sender_contact" placeholder="Email, Mobile or Whatsapp" value="" required>
+                                <small class="form-text"></small>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="sender_message" cols="30" rows="6" class="form-control text-area" placeholder="Type your message here" required></textarea>
+                                <small class="form-text"></small>
+                            </div>
+                            <div class="form-group">
+                                <center>
+                                    <button class="btn" type="submit" name="send">SEND&ensp;<i class="fab fa-telegram-plane"></i></button>
+                                </center>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <footer class="bg-light">
+        <center>
+            <a href="https://www.one.lt/" class="copyright-link"><button class="copyright-btn">©&ensp;2019&nbsp;</button></a>
+        </center>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script>
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+
+</body>
+
+</html>
